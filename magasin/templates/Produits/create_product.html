@@ -1,0 +1,26 @@
+{% extends 'magasin/base.html' %} {% block content %}
+<div class="col-md-12 text-center">
+  <h2>Manipulation Produit</h2>
+</div>
+<form
+  method="POST"
+  class="post-form"
+  style="margin-left: 40px"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %} {{ form.as_p }}
+  <button type="sumit" class="btn btn-success">Enregistrer</button>
+</form>
+{% endblock %} {% block styles %}
+<style>
+  body {
+    height: 800px;
+    background-image: url('/static/images/ajout.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    /* you can adjust the background-position as needed */
+    background-position: center;
+  }
+</style>
+{% endblock %}
